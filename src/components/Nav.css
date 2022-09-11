@@ -1,0 +1,23 @@
+  .nav {
+    width: 490px;
+    height: 877px;
+    background-image: url('./img/navigation.png');
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  .home {
+    position: absolute;
+    top: 240px;
+    left: 100px;
+    z-index: 3;
+  }
+
+  .gameBT {
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 100px;
+    z-index: 3;
+  }

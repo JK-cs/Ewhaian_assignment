@@ -8,33 +8,29 @@ import game from "../img/game.png";
 import intro from '../img/intro.png';
 import hamburger from "../img/hamburger.png";
 import Nav from "./Nav";
-import '../App.css';
+import './Main.css';
 
 function Main() {
 
-    const [nav, setNav] = useState(0);
+    const [clickNav, setClickNav] = useState(false);
 
     const onClick = () => {
-        if (nav === 0)
-            setNav(1);
+        if (clickNav === false)
+            setClickNav(true);
         else
-            setNav(0);
+            setClickNav(false);
     };
-
-    useEffect(() => {
-        if (nav === 0) {
-        }
-        else {
-            <Nav />;
-        }
-    }, [nav]);
 
     return (
         <div className="Main">
+            <div className="nav-container">
+                {clickNav ? (
+                    <Nav />
+                ) : console.log()}
+            </div>
             <div className="background">
                 <div className="header">
-                    <button type="button" onClick={onClick}>
-                        <img src={hamburger} classname="hamburger" alt="hamburger"></img>
+                    <button type="button" className="hamburger" onClick={onClick}>
                     </button>
                     <Link to="/login" className="login" id="login">
                         <img src={login} alt="login" />

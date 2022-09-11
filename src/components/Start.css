@@ -1,0 +1,250 @@
+.startBackground {
+    width: 1438px;
+    height: 1025px;
+    background-image: url('../img/startBackground.png');
+    position: relative;
+}
+
+.gameTitle {
+    position: absolute;
+    left: 347.09px;
+    top: 0px;
+    z-index: 2;
+}
+
+.logo {
+    width: 170px;
+    height: 50px;
+    background-image: url('../img/logo.png');
+    position: absolute;
+    top: 30px;
+    left: 1150px;
+    z-index: 3;
+}
+
+.startMushroom {
+    position: absolute;
+    top: 428px;
+    left: 533.92px;
+}
+
+.startBT {
+    position: absolute;
+    top: 668.08px;
+    left: 150px;
+    animation: spin20 1.5s infinite ease-in-out;
+    animation-direction: alternate;
+}
+
+#cloud {
+    animation-direction: alternate;
+}
+
+#grass {
+    animation-direction: alternate;
+}
+
+.cloud1 {
+    position: absolute;
+    top: 71.86px;
+    left: 243.76px;
+    animation: goLeft 2s infinite ease-in-out;
+    z-index: 1;
+}
+
+.cloud2 {
+    position: absolute;
+    top: 43.86px;
+    left: 0px;
+    animation: goLeft 2s infinite ease-in-out;
+}
+
+.cloud3 {
+    position: absolute;
+    top: 290.5px;
+    left: 0px;
+    animation: goLeft 3s infinite ease-in-out;
+
+}
+
+.cloud4 {
+    position: absolute;
+    top: 0px;
+    left: 1046.23px;
+    animation: goRight 2s infinite ease-in-out;
+}
+
+.cloud5 {
+    position: absolute;
+    top: 61.2px;
+    left: 885.49px;
+    animation: goRight 2s infinite ease-in-out;
+    z-index: 1;
+}
+
+.cloud6 {
+    position: absolute;
+    top: 291.39px;
+    left: 1147.69px;
+    animation: goRight2 3s infinite ease-in-out;
+    animation-direction: alternate-reverse;
+}
+
+.grass1 {
+    position: absolute;
+    top: 800px;
+    left: 0px;
+    animation: spin20 2s infinite ease-in-out;
+}
+
+.grass2 {
+    position: absolute;
+    top: 875px;
+    left: 49.44px;
+    animation: spin20 1s infinite ease-in-out;
+}
+
+.grass3 {
+    position: absolute;
+    top: 955px;
+    left: 684.34px;
+    animation: spinLeft20 1s infinite ease-in-out;
+}
+
+.grass4 {
+    position: absolute;
+    top: 917.44px;
+    left: 912.48px;
+    animation: spin10 2s infinite ease-in-out;
+}
+
+.grass5 {
+    position: absolute;
+    top: 901px;
+    left: 1297.63px;
+    animation: spin10 1.5s infinite ease-in-out;
+}
+
+
+
+@media screen and (max-width:500px) {
+    .startBackground {
+        width: 375px;
+        height: 812px;
+        background-image: url('../img/mobileStartBackground.png');
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+    }
+
+    .logo {
+        width: 86px;
+        height: 24.76px;
+        background-image: url('../img/mobileLogo.png');
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        z-index: 3;
+    }
+
+    .gameTitle {
+        width: 236px;
+        height: auto;
+        position: absolute;
+        background-image: url('../img/mobileGameTitle.png');
+        top: 0px;
+        left: 40px;
+        z-index: 2;
+    }
+
+    .startBT {
+        position: absolute;
+        width: 182.26px;
+        height: 111.5px;
+        top: 638px;
+        left: 31px;
+        animation: spin20 1.5s infinite ease-in-out;
+        animation-direction: alternate;
+    }
+}
+
+@keyframes goLeft {
+    from {
+        margin-left: 0px;
+    }
+
+    to {
+        margin-left: -30px;
+    }
+}
+
+@keyframes goRight {
+    from {
+        margin-left: 100px;
+    }
+
+    to {
+        margin-left: 130px;
+    }
+}
+
+@keyframes goRight2 {
+    from {
+        margin-left: 50px;
+    }
+
+    to {
+        margin-left: 90px;
+    }
+}
+
+@keyframes spin20 {
+    from {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes spinLeft20 {
+    from {
+        transform: rotate(20deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes spinRight20 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes spin20 {
+    from {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes spin10 {
+    from {
+        transform: rotate(-5deg);
+    }
+
+    to {
+        transform: rotate(5deg);
+    }
+}
