@@ -1,26 +1,22 @@
-import { BrowserRouter as BrowserRouter, Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route, } from 'react-router-dom';
+import React, { Component } from 'react';
 import './App.css';
 import Main from './components/Main';
+import Start from './components/Start';
+import Play from './components/PlayGame';
 
 
 function App() {
   return (
-    /* <div>
-       <Main />
-       <div>
-         <Route path="/" component={Main} exact={true} />
-       </div>
-     </div>
- */
-    <div className='App'>
-      <BrowserRouter>
-        <Main />
+    <BrowserRouter>
+      <div className="App">
         <Routes>
-          <Route path="/" component={Main} exact={true}></Route>
+          <Route exact path="/" element={<Main />} />
+          <Route path="/start" element={<Start />} />
+                    <Route path="/play" element={<Play />} />
         </Routes>
-      </BrowserRouter>
-    </div>
-
+      </div>
+    </BrowserRouter>
   );
 }
 
